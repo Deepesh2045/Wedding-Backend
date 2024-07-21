@@ -18,6 +18,9 @@ app.use(cors(
 // connect Database
 connectDb();
 
+app.get("/",(req,res)=>{
+  res.json("Hello World")
+})
 
 // Register Routes
 app.use(weddingRoutes)
