@@ -8,19 +8,17 @@ const port: number = process.env.API_PORT ? parseInt(process.env.API_PORT) : 300
 
 app.use(express.json());
 app.use(cors(
-  {
-    origin:["http://deploy-mern-1whp.vercel.app"],
-    methods:["POST","GET"],
-    credentials:true
-  }
+  // {
+  //   origin:["http://deploy-mern-1whp.vercel.app"],
+  //   methods:["POST","GET"],
+  //   credentials:true
+  // }
 ));
 
 // connect Database
 connectDb();
 
-app.get("/",(req,res)=>{
-  res.json("Hello World")
-})
+
 
 // Register Routes
 app.use(weddingRoutes)
