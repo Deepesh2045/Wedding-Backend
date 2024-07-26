@@ -8,12 +8,14 @@ const cors_1 = __importDefault(require("cors"));
 const connectDB_1 = __importDefault(require("./connectDB"));
 const wedding_routes_1 = __importDefault(require("./Wedding/wedding.routes"));
 const app = (0, express_1.default)();
-const port = process.env.API_PORT ? parseInt(process.env.API_PORT) : 3000;
+const port = process.env.API_PORT
+    ? parseInt(process.env.API_PORT)
+    : 3000;
 app.use(express_1.default.json());
 app.use((0, cors_1.default)({
-    origin: ["http://wedding-frontend-phi.vercel.app"],
+    origin: "http://wedding-frontend-phi.vercel.app",
     methods: ["POST", "GET"],
-    credentials: true
+    credentials: true,
 }));
 // connect Database
 (0, connectDB_1.default)();
