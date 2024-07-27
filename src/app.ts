@@ -10,11 +10,11 @@ const port: number = process.env.API_PORT
 
 app.use(express.json());
 app.use(
-  // cors({
-  //   origin: "http://wedding-frontend-phi.vercel.app",
-  //   methods: ["POST", "GET"],
-  //   credentials: true,
-  // })
+  cors({
+    // origin: "http://wedding-frontend-phi.vercel.app",
+    // methods: ["POST", "GET"],
+    // credentials: true,
+  })
 );
 
 // connect Database
